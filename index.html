@@ -11,12 +11,25 @@
     <title>Portfolio Creative AK</title>
 </head>
 <body>
+    <div class="cta--burger">
+        <div class="trait"></div>
+        <div class="trait"></div>
+        <div class="trait"></div>
+    </div>
+    <div class="menu--burger">
+        <ul>
+            <li>je suis un li</li>
+            <li>je suis un li</li>
+            <li>je suis un li</li>
+        </ul>
+    </div>
     <header>
         <ul> 
             <li>Works</li>
             <li><a href="blog.html">Blog</a></li>
             <li>Contact</li>
         </ul>
+
         <section id="presentation" >
             <img id="portrait" src="assets/portrait.png" alt="John's portrait">                      
             <section id="presentation_text" >
@@ -88,5 +101,16 @@
         </section>
         <p>Copyright ©2020 All rights reserved </p>
     </footer>
+    <script>
+        const menuBurger = document.querySelector(".menu--burger");
+        const cta = document.querySelector(".cta--burger");
+
+        cta.addEventListener("click", function (e) {
+            menuBurger.style.transform = `translateX(0%)`;
+            // console.log(menuBurger);
+        })
+
+    </script>
 </body>
+
 </html>
