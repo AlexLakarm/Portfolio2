@@ -105,10 +105,18 @@
         const menuBurger = document.querySelector(".menu--burger");
         const cta = document.querySelector(".cta--burger");
 
-        cta.addEventListener("click", function (e) {
-            menuBurger.style.transform = `translateX(0%)`;
-            // console.log(menuBurger);
-        })
+        function openAndCloseMenu () {
+            // si il est ouvert on le ferme et vice versa
+            if (menuBurger.classList.contains("open")) {
+                menuBurger.style.transform = 'translateX(100%)';
+                menuBurger.classList.remove("open")
+            } else {
+                menuBurger.style.transform = 'translateX(0%)';
+                menuBurger.classList.add("open")
+            }
+        }
+
+        cta.addEventListener("click", openAndCloseMenu);
 
     </script>
 </body>
